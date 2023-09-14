@@ -1,11 +1,27 @@
 # Support for PEP 517
 # https://setuptools.readthedocs.io/en/latest/setuptools.html#setup-cfg-only-projects
 [build-system]
-build-backend = "setuptools.build_meta"
-requires = [
-  "setuptools >= 40.9.0",
-  "wheel",
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "lazydocs"
+version = "0.4.8"
+description = "Generate markdown API documentation for Google-style Python docstring."
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+  { name="ML Tooling Team" },
+  { name="ML Tooling Team", email="team@mltooling.org" },
+  { name="Clinton Langerak", email="clinton.langerak@proav.com.au" },
 ]
+requires-python = ">=3.6"
+
+[project.urls]
+Homepage = "https://github.com/ClintonLangerakPAVS/lazydocs"
+
+[project.scripts]
+lazydocs = "lazydocs._cli:app"
 
 [tool.black]
 exclude = '''

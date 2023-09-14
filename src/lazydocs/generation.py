@@ -13,7 +13,7 @@ from pydoc import locate
 from typing import Any, Callable, Dict, List, Optional
 
 _RE_BLOCKSTART_LIST = re.compile(
-    r"(Args:|Arg:|Arguments:|Parameters:|Kwargs:|Attributes:|Returns:|Yields:|Kwargs:|Raises:).{0,2}$",
+    r"(Args:|Arg:|Arguments:|Parameters:|Kwargs:|Attributes:|Returns:|Yields:|Kwargs:|Raises:|Events:).{0,2}$",
     re.IGNORECASE,
 )
 
